@@ -113,3 +113,6 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.navbar-brand.nav_new{
+    padding-top: 0px!important;
+}
