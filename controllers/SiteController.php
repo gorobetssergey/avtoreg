@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Users;
+use yii\helpers\Url;
 
 class SiteController extends Controller
 {
