@@ -116,3 +116,41 @@ a.desc:after {
 .navbar-brand.nav_new{
     padding-top: 0px!important;
 }
+
+@media (min-width: 765px){
+    .navbar-inverse.navbar-brand.navbar-fixed-top.good.navbar {
+        color: #0f0f0f!important;
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .navbar-inverse .navbar-brand {
+        color: red!important;
+        padding: 15px 15px 15px;
+        display: block;
+    }
+}
+.navbar-inverse.navbar-fixed-top.good.navbar#footer{
+    height: 20px!important;
+}
+.navbar{
+    margin-bottom: 0px!important;
+    min-height: 40px!important;
+    height: 40px;
+}
+ul.navbar-nav.navbar-right.nav{
+    min-height: 40px!important;
+    height: 40px;
+    line-height: 40px;
+}
+ul.navbar-nav.navbar-right.nav li>a{
+    height: 40px;
+    padding-top: 10px;
+}
+footer.footer.navbar-fixed-bottom, footer.footer.navbar-fixed-bottom div.container{
+    height: 40px;
+}
+.footer{
+    padding-top: 10px;
+}

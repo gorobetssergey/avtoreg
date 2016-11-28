@@ -995,10 +995,7 @@ a.start_title_link,a.start_title_link:hover,a.start_title_link:focus {
   background-color: #028fcc!important;
   color: #0f0f0f;
 }
-.navbar-inverse .navbar-brand {
-  color: #0f0f0f!important;
-}
-.navbar-inverse .navbar-brand:hover {
+.navbar-inverse{
   color: white!important;
   font-weight: 800;
 }
@@ -1009,8 +1006,22 @@ a.start_title_link,a.start_title_link:hover,a.start_title_link:focus {
   color: white!important;
   font-weight: 800;
 }
-/*@media all and (min-width: 1200px) {*/
-  /*.wow {*/
-    /*height: 280px;*/
-  /*}*/
-/*}*/
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #e57373;
+  height: 100%;
+}
+@media (min-width: 765px){
+    .navbar-inverse .navbar-brand {
+        color: #0f0f0f!important;
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .navbar-inverse .navbar-brand {
+        color: red!important;
+        padding: 15px 15px 15px;
+        display: block;
+    }
+}

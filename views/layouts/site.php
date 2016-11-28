@@ -53,45 +53,21 @@ SiteAsset::register($this);
     <!--/.preloader-->
     <?php
     NavBar::begin([
-        'brandLabel' => 'Авторегистрация',
+        'brandLabel' => 'Главная',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top good',
         ],
     ]);
 
     $menuItems = [
-//        ['label' => 'Home', 'url' => ['/site/index']],
-//        ['label' => 'About', 'url' => ['/site/about']],
-//        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Регистрация', 'url' => ['site/auto_reg_gibdd']],
+        ['label' => 'Техосмотр', 'url' => ['site/maps_diagnostik']],
+        ['label' => 'Автострахование', 'url' => ['site/strahovka']],
+        ['label' => 'Покупка-продажа', 'url' => ['site/pokupka']],
+        ['label' => 'Цены', 'url' => ['site/price']],
+        ['label' => 'Контакты', 'url' => ['site/contact']],
     ];
-    if(Yii::$app->user->isGuest):
-        $menuItems[]=[
-            'label' => 'Войти',
-            'url' => ['/site/login']
-        ];
-        $menuItems[]=[
-            'label' => 'Регистрация',
-            'url' => ['/site/reg']
-        ];
-    else:
-        if(Yii::$app->user->identity->role==Users::ROLE_USER):
-            $menuItems[] = [
-                'label' => 'Кабинет', 'url' => ['/cabinet/index'],
-            ];
-        elseif(Yii::$app->user->identity->role==Users::ROLE_ADMIN):
-            $menuItems[] = [
-                'label' => 'Админка', 'url' => ['/admin/index'],
-            ];
-        endif;
-        $menuItems[]=[
-            'label' => 'Выйти (' . Yii::$app->user->identity->email . ')',
-            'url' => ['/site/logout'],
-            'linkOptions' => [
-                'data-method' => 'post'
-            ]
-        ];
-    endif;
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
