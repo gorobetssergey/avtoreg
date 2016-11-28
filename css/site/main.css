@@ -94,12 +94,8 @@ a:hover {
   outline: none
 }
 
-section {
-  padding: 90px 0;
-}
-
 .heading {
-  padding-bottom:90px;
+  padding-bottom:20px;
 }
 
 .preloader {
@@ -869,10 +865,11 @@ section {
 }
 
 .form-control {
-  background-color: transparent;
-  border-color: rgba(255,255,255,.1);
-  height: 50px;
-  border-radius: 0;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #606060;
+  border-color: #ebeef6;
   box-shadow: none;
 }
 
@@ -978,5 +975,42 @@ ul.address {
 }
 
 /*Presets*/
+a.start_title_link,a.start_title_link:hover,a.start_title_link:focus {
+  text-decoration: none;
+  color: #0f0f0f;
+}
 
+.wow.start_title:hover{
+  border: 1px solid #00b3ee;
+  border-radius: 20px;
+  background-color: #C1E0F0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
+.wow.start_title {
+  padding-top: 30px!important;
+  height: 280px;
+}
+.navbar-inverse.navbar-fixed-top{
+  background-color: #028fcc!important;
+  color: #0f0f0f;
+}
+.navbar-inverse .navbar-brand {
+  color: #0f0f0f!important;
+}
+.navbar-inverse .navbar-brand:hover {
+  color: white!important;
+  font-weight: 800;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #0f0f0f!important;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+  color: white!important;
+  font-weight: 800;
+}
+/*@media all and (min-width: 1200px) {*/
+  /*.wow {*/
+    /*height: 280px;*/
+  /*}*/
+/*}*/

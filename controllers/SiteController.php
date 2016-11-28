@@ -133,24 +133,6 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
-     *
-     * @return string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
      * Displays about page.
      *
      * @return string
@@ -158,5 +140,35 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionAuto_reg_gibdd()
+    {
+        return $this->render('auto_reg_gibdd');
+    }
+
+    public function actionMaps_diagnostik()
+    {
+        return $this->render('maps_diagnostik');
+    }
+
+    public function actionStrahovka()
+    {
+        return $this->render('strahovka');
+    }
+
+    public function actionPokupka()
+    {
+        return $this->render('pokupka');
+    }
+
+    public function actionPrice()
+    {
+        return $this->render('price');
+    }
+
+    public function actionContact()
+    {
+        return $this->render('contact');
     }
 }

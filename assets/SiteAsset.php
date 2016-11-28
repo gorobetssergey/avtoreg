@@ -22,7 +22,7 @@ class SiteAsset extends AssetBundle
         //'css/site/bootstrap.min.css',
         'css/site/animate.min.css',
         'css/site/font-awesome.min.css',
-        'css/site/lightbox.css',
+//        'css/site/lightbox.css',
         'css/site/main.css',
         ['css/site/presets/preset1.css','id' => 'css-preset'],
         'css/site/responsive.css',
@@ -39,7 +39,7 @@ class SiteAsset extends AssetBundle
         'js/site/mousescroll.js',
         'js/site/smoothscroll.js',
         'js/site/jquery.countTo.js',
-        'js/site/lightbox.min.js',
+//        'js/site/lightbox.min.js',
         'js/site/main.js',
     ];
     public $depends = [
