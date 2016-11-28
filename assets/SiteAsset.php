@@ -19,7 +19,7 @@ class SiteAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        //'css/site/bootstrap.min.css',
+        'css/site/bootstrap.min.css',
         'css/site/animate.min.css',
         'css/site/font-awesome.min.css',
 //        'css/site/lightbox.css',
@@ -32,8 +32,8 @@ class SiteAsset extends AssetBundle
     public $js = [
         ['js/site/html5shiv.js','position' => \yii\web\View::POS_HEAD],
         ['js/site/respond.min.js','position' => \yii\web\View::POS_HEAD],
-        //'js/site/jquery.js',
-        //'js/site/bootstrap.min.js',
+        'js/site/jquery.js',
+        'js/site/bootstrap.min.js',
         'js/site/jquery.inview.min.js',
         'js/site/wow.min.js',
         'js/site/mousescroll.js',

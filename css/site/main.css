@@ -1021,7 +1021,7 @@ a.start_title_link,a.start_title_link:hover,a.start_title_link:focus {
 @media (max-width: 768px){
     .navbar-inverse .navbar-brand {
         color: red!important;
-        padding: 15px 15px 15px;
+        padding: 10px 15px 15px;
         display: block;
     }
 }

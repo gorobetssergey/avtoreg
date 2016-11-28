@@ -127,7 +127,7 @@ a.desc:after {
 @media (max-width: 768px){
     .navbar-inverse .navbar-brand {
         color: red!important;
-        padding: 15px 15px 15px;
+        padding: 10px 15px 15px;
         display: block;
     }
 }
@@ -153,4 +153,7 @@ footer.footer.navbar-fixed-bottom, footer.footer.navbar-fixed-bottom div.contain
 }
 .footer{
     padding-top: 10px;
+}
+.navbar-toggle {
+    margin-top: 2px;
 }
