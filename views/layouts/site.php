@@ -8,6 +8,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use app\assets\SiteAsset;
 use app\models\Users;
+use app\components\WidgetLeftMenu;
+use app\components\WidgetRightMenu;
 
 
 SiteAsset::register($this);
@@ -43,30 +45,55 @@ SiteAsset::register($this);
     ?>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <!-- Start SiteHeart code -->
+    <!-- Start SiteHeart code -->
+    <script>
+        (function(){
+            var widget_id = 846477;
+            _shcp =[{widget_id : widget_id}];
+            var lang =(navigator.language || navigator.systemLanguage
+            || navigator.userLanguage ||"en")
+                .substr(0,2).toLowerCase();
+            var url ="widget.siteheart.com/widget/sh/"+ widget_id +"/"+ lang +"/widget.js";
+            var hcc = document.createElement("script");
+            hcc.type ="text/javascript";
+            hcc.async =true;
+            hcc.src =("https:"== document.location.protocol ?"https":"http")
+                +"://"+ url;
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hcc, s.nextSibling);
+        })();
+    </script>
+    <script type="text/javascript" charset="utf-8" src="http://world-weather.ru/wwinformer.php?userid=2f6d8dcc35212d20cb1e182682e0924b"></script>
+    <!-- End SiteHeart code -->
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 <div class="wrap">
-    <!--.preloader-->
-    <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
-    <!--/.preloader-->
+    <div class="container">
+        <diw class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xm-2"></div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xm-8" id="title_imajes"></div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xm-2"></div>
+        </diw>
+    </div>
     <?php
     NavBar::begin([
-        'brandLabel' => 'Главная',
+        'brandLabel' => 'Логотип',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top good',
+            'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
 
     $menuItems = [
-        ['label' => 'Регистрация', 'url' => ['site/auto_reg_gibdd']],
-        ['label' => 'Техосмотр', 'url' => ['site/maps_diagnostik']],
-        ['label' => 'Автострахование', 'url' => ['site/strahovka']],
-        ['label' => 'Покупка-продажа', 'url' => ['site/pokupka']],
-        ['label' => 'Цены', 'url' => ['site/price']],
-        ['label' => 'Контакты', 'url' => ['site/contact']],
+        ['label' => 'Регистрация', 'url' => ['/site/auto_reg_gibdd']],
+        ['label' => 'Техосмотр', 'url' => ['/site/maps_diagnostik']],
+        ['label' => 'Страхование', 'url' => ['/site/strahovka']],
+        ['label' => 'Покупка', 'url' => ['/site/pokupka']],
+        ['label' => 'Цены', 'url' => ['/site/price']],
+        ['label' => 'Контакты', 'url' => ['/site/contact']],
     ];
 
     echo Nav::widget([
@@ -75,8 +102,21 @@ SiteAsset::register($this);
     ]);
     NavBar::end();
     ?>
-    <div class="container">
-        <?= $content ?>
+    <div class="container-fluid" id = "start_">
+        <h2 class="text-center">Центр автомобильных услуг</h2>
+        <div class="row" id="boss">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12 text-center" id = "left">
+                    <?= WidgetLeftMenu::widget() ?>
+                </div>
+                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12" id="centers">
+                    <?= $content ?>
+                </div>
+                <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12 text-center" id = "right">
+                    <?= WidgetRightMenu::widget() ?>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -84,7 +124,7 @@ SiteAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">SerGO</p>
     </div>
 </footer>
 <?php $this->endBody() ?>
