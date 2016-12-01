@@ -105,7 +105,7 @@ SiteAsset::register($this);
     <div class="container-fluid" id = "start_">
         <h2 class="text-center">Центр автомобильных услуг</h2>
         <div class="row" id="boss">
-            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" id = "aaa">
                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12 text-center" id = "left">
                     <?= WidgetLeftMenu::widget() ?>
                 </div>

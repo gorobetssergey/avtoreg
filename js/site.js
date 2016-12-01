@@ -5,5 +5,11 @@ $(document).ready(function () {
         $('#left').height(client_h);
         $('#right').height(client_h);
         $('#centers').height(client_h);
+    }else{
+        var left = $('#left').detach();
+        var centers = $('#centers').detach();
+
+        $('#aaa').prepend(left);
+        $('#aaa').prepend(centers);
     }
 });
